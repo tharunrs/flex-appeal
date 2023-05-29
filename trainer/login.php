@@ -8,7 +8,7 @@ if(isset($_POST['submit'])) {
   $password = md5(($_POST['password']));
   if($email != "" && $password != "") {
     try {
-      $query = "select id, fname, email, phone_no, password, create_date from tbltrainer where email=:email and password=:password";
+      $query = "select id, first_name, email, phone, password,hire_date from tbltrainer natural join tblemployee where email=:email and password=:password";
       $stmt = $dbh->prepare($query);
       $stmt->bindParam('email', $email, PDO::PARAM_STR);
       $stmt->bindValue('password', $password, PDO::PARAM_STR);
