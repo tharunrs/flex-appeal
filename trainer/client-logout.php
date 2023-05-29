@@ -23,14 +23,16 @@ if (strlen($_SESSION['trainerid'] == 0)) {
 
     $logob = DateTime::createFromFormat("Y-m-d H:i:s", $log);
     $currentDateTimeob = DateTime::createFromFormat("Y-m-d H:i:s", $currentDateTime);
+    $comment=$_GET['comment'];
 
     $diff = $logob->diff($currentDateTimeob);
 
     $duration = round($diff->h+$diff->days * 24);
-    $sql = "UPDATE tblsession SET logout_time=:logout,duration=:duration WHERE id=:id";
+    $sql = "UPDATE tblsession SET logout_time=:logout,duration=:duration,comment=:comment WHERE id=:id";
     $query = $dbh->prepare($sql);
     $query->bindParam(':id', $uid, PDO::PARAM_INT);
     $query->bindParam(':duration', $duration, PDO::PARAM_INT);
+    $query->bindParam(':comment',$comment,PDO::PARAM_STR);
     $query->bindParam(':logout', $currentDateTime, PDO::PARAM_STR);
 
 
@@ -78,6 +80,7 @@ if (strlen($_SESSION['trainerid'] == 0)) {
                   <tr>
                     <th>Client ID</th>
                     <th>Name</th>
+                    <th>Comment</th>
                     <th>Action</th>
 
                   </tr>
@@ -96,8 +99,9 @@ if (strlen($_SESSION['trainerid'] == 0)) {
                       <tr>
                         <td><?php echo htmlentities($result->u_id); ?></td>
                         <td><?php echo htmlentities($result->fname); ?></td>
+                        <td><input type="text" name="comment" placeholder="Give Comments"></td>
                         <td>
-                          <a href="client-logout.php?mark=<?php echo htmlentities($result->id); ?>&log=<?php echo htmlentities($result->log) ?>"><button class="btn btn-danger" type="button">logout</button></a>
+                          <a href="client-logout.php?mark=<?php echo htmlentities($result->id); ?>&log=<?php echo htmlentities($result->log) ?>&comment="><button class="btn btn-danger" type="button">logout</button></a>
                         </td>
                       </tr>
                   <?php  }
