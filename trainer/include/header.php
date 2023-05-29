@@ -1,4 +1,4 @@
- <header class="app-header" style="background-color: rgba(58, 58, 59, 0.862);"><a class="app-header__logo" href="index.php" style="background-color: rgba(58, 58, 59, 0.862);">GYM MS</a>
+ <header class="app-header" style="background-color: rgba(58, 58, 59, 0.862);"><a class="app-header__logo" href="index.php" style="background-color: rgba(58, 58, 59, 0.862);">FITMAXX</a>
       <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
       <!-- Navbar Right Menu-->
       <ul class="app-nav">
