@@ -30,56 +30,61 @@ foreach ($results as $result) {
 ?>
 
 
+<!DOCTYPE html>
+<html lang="zxx">
 
-    <!DOCTYPE html>
-    <html lang="zxx">
+<head>
+    <title>User | Dietplan</title>
+    <link rel="icon" type="image/x-icon" href="img/bell.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Ahana Yoga HTML Template">
+    <meta name="keywords" content="yoga, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
 
-    <head>
-        <title>Gym Management System</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Ahana Yoga HTML Template">
-        <meta name="keywords" content="yoga, html">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/owl.carousel.min.css" />
-        <link rel="stylesheet" href="css/nice-select.css" />
-        <link rel="stylesheet" href="css/magnific-popup.css" />
-        <link rel="stylesheet" href="css/slicknav.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
 
-        <!-- Main Stylesheets -->
-        <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    </head>
-
-    <body>
-        <h1 style="color: black"><?php echo htmlentities($result->content); ?></h1>
-
-        <div class="gauge">
-            <div class="gauge__body">
-                <div class="gauge__fill"></div>
-                <div class="gauge__cover"></div>
+<body>
+    <section class="vh-100" style = "background-image: url(img/diet.avif) ;background-repeat: no-repeat; background-size: cover;">
+        <div class="result-box">
+            <h2><p style="color: #92efdc; font-size:35px;"><u>CUSTOMIZED DIET PLAN</u></p><?php echo htmlentities($result->content); ?></h2>
+        </div>
+        <div class="meter">
+            <div class="gauge">
+                <div class="gauge__body">
+                    <div class="gauge__fill"></div>
+                    <div class="gauge__cover"></div>
+                </div>
             </div>
         </div>
+    </section>
 
 
-        <script>
-            const gaugeElement = document.querySelector(".gauge");
+    <script>
+        const gaugeElement = document.querySelector(".gauge");
 
-            function setGaugeValue(gauge, value) {
-                if (value < 0 || value > 1) {
-                    return;
-                }
-
-                gauge.querySelector(".gauge__fill").style.transform = `rotate(${value / 2}turn)`;
-                gauge.querySelector(".gauge__cover").textContent = `${Math.round(value * 100)}%`;
+        function setGaugeValue(gauge, value) {
+            if (value < 0 || value > 1) {
+                return;
             }
 
-            setGaugeValue(gaugeElement, <?php echo $gauge_val;?>);
-        </script>
-    </body>
+            gauge.querySelector(".gauge__fill").style.transform = `rotate(${value / 2}turn)`;
+            gauge.querySelector(".gauge__cover").textContent = `${Math.round(value * 100)}%`;
+        }
+
+        setGaugeValue(gaugeElement, <?php echo $gauge_val;?>);
+    </script>
+</body>
 <?php
 }
 ?>

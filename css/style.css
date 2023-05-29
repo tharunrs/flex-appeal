@@ -4362,13 +4362,13 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .gauge {
 	width: 100%;
-	max-width: 250px;
+	max-width: 150px;
 	font-family: "Roboto", sans-serif;
 	font-size: 32px;
 	color: #004033;
-  }
+}
   
-  .gauge__body {
+.gauge__body {
 	width: 100%;
 	height: 0;
 	padding-bottom: 50%;
@@ -4377,21 +4377,21 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	border-top-left-radius: 100% 200%;
 	border-top-right-radius: 100% 200%;
 	overflow: hidden;
-  }
+}
   
-  .gauge__fill {
+.gauge__fill {
 	position: absolute;
 	top: 100%;
 	left: 0;
 	width: inherit;
 	height: 100%;
-	background: #009578;
+	background: #021511;
 	transform-origin: center top;
 	transform: rotate(0.25turn);
 	transition: transform 0.2s ease-out;
-  }
+}
   
-  .gauge__cover {
+.gauge__cover {
 	width: 75%;
 	height: 150%;
 	background: #ffffff;
@@ -4403,10 +4403,22 @@ only screen and (min-width: 576px) and (max-width: 767px),
   
 	/* Text */
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	padding-bottom: 25%;
 	box-sizing: border-box;
-  }
+}
 
+.result-box h2{
+	color: rgb(255, 218, 54); 
+	font-family: georgia;
+	text-align: center;
+	font-size: 35px;
+	font-weight:bold;
+	padding-top: 13rem;
+	padding-left:20rem; 
+	padding-right:20rem;
+}
 
+.meter{
+	align-items: center;
+}
