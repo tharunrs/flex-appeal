@@ -1,4 +1,12 @@
+/* =================================
+------------------------------------
+  Ahana | Yoga HTML Template
+  Version: 1.0
+ ------------------------------------
+ ====================================*/
 
+/*----------------------------------------*/
+/* Template default CSS
 /*----------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Playfair+Display:400,400i,700,700i&display=swap");
@@ -204,7 +212,7 @@ ol {
 }
 
 .site-btn.sb-gradient {
-	color: #462173;
+	color: #fff;
 	padding: 13px 29px;
 	position: relative;
 	-webkit-transition: all 0.4s;
@@ -357,7 +365,7 @@ ol {
 
 .header-top {
 	padding: 0 80px;
-	background: #000;
+	background: rgba(58, 58, 59, 0);
 }
 
 
@@ -403,7 +411,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .header-info i {
 	font-size: 6vh;
-	color: #fff;
+	color: #a7a7a7;
 	margin-right: 10px;
 	position: relative;
 
@@ -413,7 +421,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	font-size: larger;
 	position: relative;
 	top: 0.35vh;
-	color: #fff;
+	color: #fff3f3;
 	margin-bottom: 0;
 }
 
@@ -564,7 +572,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .main-menu .sub-menu li a {
 	font-size: 16px;
-	color: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+	color: #666666;
 	text-transform: none;
 	font-weight: 400;
 	position: relative;
@@ -638,9 +646,10 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 @media only screen and (min-width: 576px) and (max-width: 767px),
 (max-width: 576px) {
-	.slicknav_btn {position: relative;
-		top: 0;
-		right: 102px;
+	.slicknav_btn {
+		background: -o-linear-gradient(305deg, #f65d5d 0%, #fdb07d 100%);
+		background: linear-gradient(145deg, #f65d5d 0%, #fdb07d 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f65d5d", endColorstr="#fdb07d", GradientType=1);
 	}
 }
 
@@ -2378,7 +2387,10 @@ only screen and (min-width: 576px) and (max-width: 767px),
 ---------------------*/
 
 .pricing-section {
-	background: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+	background: rgba(58, 58, 59, 0.862)
+	/* background-image: url('/img/changepwdbg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover; */
 }
 
 .pricing-item {
@@ -2404,12 +2416,12 @@ only screen and (min-width: 576px) and (max-width: 767px),
 .pricing-item .pi-top {
 	height: 180px;
 	padding-top: 26px;
-	background: #3f3f3f;
+	background-color: #4c6079;
 	/* background-image: url(../img/silver-dark.jpg); */
 }
 
 .pricing-item .pi-top h4 {
-	font-family: "Playfair Display", serif;
+	font-family: sans-serif;
 	color: #fff;
 	font-size: 22px;
 	font-weight: 400;
@@ -2685,6 +2697,10 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	margin-right: 0;
 }
 
+footer{
+	background-color: transparent;
+}
+
 .copyright {
 	font-size: 14px;
 	color: #666666;
@@ -2724,6 +2740,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	position: relative;
 	padding-top: 220px;
 	text-align: center;
+	background-size: cover;
 }
 
 .main_text {
@@ -4355,7 +4372,6 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	opacity: 1;
 }
 
-
 /*-----------------------------------
   			Gauge
 ------------------------------------*/
@@ -4409,14 +4425,14 @@ only screen and (min-width: 576px) and (max-width: 767px),
 }
 
 .result-box h2{
-	color: rgb(255, 218, 54); 
-	font-family: georgia;
+	color: #fd5956; 
+	font-family: sans-serif;
 	text-align: center;
 	font-size: 35px;
 	font-weight:bold;
-	padding-top: 13rem;
-	padding-left:20rem; 
-	padding-right:20rem;
+	padding-top: 9rem;
+	padding-left:27rem; 
+	padding-right:2rem;
 }
 
 .meter{

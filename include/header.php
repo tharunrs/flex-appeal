@@ -97,6 +97,7 @@
 					<!--li><a href="admin/">Admin</a></li-->
 				<?php else : ?>
 					<li><a href="booking-history.php" id="booking_nav">Booking History</a></li>
+					<li><a href="attendance.php" id="booking_nav">Attendance Tracker</a></li>
 				<?php endif; ?>
 
 				<li><a href="contact.php" id="contact_nav">Contact</a></li>

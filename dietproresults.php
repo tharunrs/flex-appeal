@@ -55,10 +55,13 @@ foreach ($results as $result) {
 </head>
 
 <body>
-    <section class="vh-100" style = "background-image: url(img/diet.avif) ;background-repeat: no-repeat; background-size: cover;">
+    <section class="vh-100" style = "background-image: url(img/gallery/diet.jpg) ;background-repeat: no-repeat; background-size: cover; height:100%;">
+    <div class = "mask" style= "background-color: rgba(0,0,0,0);background-size: cover;height:100%">
+    <div class = "container-lg d-flex align-items-end vh -50">
         <div class="result-box">
-            <h2><p style="color: #92efdc; font-size:35px;"><u>CUSTOMIZED DIET PLAN</u></p><?php echo htmlentities($result->content); ?></h2>
-        </div>
+            <h2><p style="color: #464196; font-size:45px; font-weight:bold;">CUSTOMIZED DIET PLAN</p><?php echo htmlentities($result->content); ?></h2>
+      
+</div>
         <div class="meter">
             <div class="gauge">
                 <div class="gauge__body">
@@ -66,6 +69,7 @@ foreach ($results as $result) {
                     <div class="gauge__cover"></div>
                 </div>
             </div>
+</div>
         </div>
     </section>
 

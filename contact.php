@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
 	<link rel="stylesheet" href="css/style.css" />
 	<style>
 		footer {
-			background-color: #333;
+			background-color: transparent;
 			position: fixed;
 			left: 0px;
 			bottom: 0px;
@@ -61,14 +61,14 @@ if (isset($_POST['submit'])) {
 		.contact-card{
 			display: flex;
 			flex-direction: column;
-			justify-content: left;
+			justify-content: center;
 			align-items: baseline;
 		}
 	</style>
 
 </head>
 
-<body class="page-top-section set-bg" data-setbg="img/gallery/13.jpg">
+<body class="page-top-section set-bg" data-setbg="img/gallery/contact.jpg">
 	<!-- Page Preloder -->
 
 
@@ -167,7 +167,7 @@ if (isset($_POST['submit'])) {
 
 	<!-- Pricing Section -->
 	<section class="">
-		<div class="container">
+		<div class="container" style="align-items:center;">
 			<!-- <div class="section-title text-center"> -->
 			<!-- <img src="img/icons/logo-icon.png" alt=""> -->
 			<!-- <h2>About Us</h2> -->
@@ -175,14 +175,14 @@ if (isset($_POST['submit'])) {
 
 
 			<div class="row">
-				<div class="col-lg-12 col-sm-6">
+				<div class="col-lg-12 col-sm-12">
 					<h2 style="color:aliceblue; z-index:2;"> Contact </h2>
-					<section class="pricing-section spad">
-						<div class="container">
+					<section class="pricing-section spad" style="padding-top:3.5rem">
+						<div class="container" style="justify-content:center;">
 
 							<div class="row">
 
-								<div class="contact-card">
+								<div class="contact-card" style="font-size:50px;">
 									<p><strong>Email:</strong> info@yourdomain.com</p>
 									<p><strong>Contact No:</strong> 1234567890, 1122334455</p>
 									<p><strong>Address:</strong> Test Address</p>

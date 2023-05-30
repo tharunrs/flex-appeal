@@ -1,5 +1,5 @@
 <?php session_start();
-error_reporting(E_ALL);
+error_reporting(0);
 require_once('include/config.php');
 if (strlen($_SESSION["uid"]) == 0) {
   header('location:login.php');
@@ -25,6 +25,16 @@ if (strlen($_SESSION["uid"]) == 0) {
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <style>
+		footer {
+			background-color: transparent;
+			position: relative;
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+		}
+</style>
+
   </head>
 
   <body>
@@ -36,7 +46,7 @@ if (strlen($_SESSION["uid"]) == 0) {
     <!-- Header Section end -->
 
     <!-- Page top Section -->
-    <section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
+    <section class="page-top-section set-bg" data-setbg="img/gallery/details.jpg">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 m-auto text-white">
@@ -49,13 +59,13 @@ if (strlen($_SESSION["uid"]) == 0) {
     <!-- Page top Section end -->
 
     <!-- Contact Section -->
-    <section class="contact-page-section spad overflow-hidden">
+    <section class="contact-page-section spad overflow-hidden" style="background-color:#8AA782;">
       <div class="container">
 
         <div class="row">
 
           <div class="col-lg-12">
-            <table class="table table-hover table-bordered">
+            <table class="table table-hover table-bordered bg-light" style="border-color:black;">
               <thead>
                 <?php $bookindid = $_GET['bookingid'];
                 $sql = "SELECT t1.id as bookingid,t3.fname as Name, t3.email as email,t1.booking_date as bookingdate,t2.titlename as title,t2.PackageDuratiobn as PackageDuratiobn,
@@ -124,7 +134,7 @@ on t1.userid=t3.id
             $results = $query->fetchAll(PDO::FETCH_OBJ);
             $cnt = 1;
             if ($query->rowCount() > 0) { ?>
-              <table class="table table-hover table-bordered">
+              <table class="table table-hover table-bordered bg-light">
                 <tr>
                   <th colspan="3" style="text-align:center;font-size:20px;">Payment History</th>
                 </tr>
@@ -154,13 +164,16 @@ on t1.userid=t3.id
 
         </div>
       </div>
+      <footer>
+      <?php include 'include/footer.php'; ?></footer>
+
     </section>
     <!-- Trainers Section end -->
 
 
 
     <!-- Footer Section -->
-    <?php include 'include/footer.php'; ?>
+    
     <!-- Footer Section end -->
 
     <div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>

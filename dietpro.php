@@ -83,8 +83,8 @@ $uid = $_SESSION['uid'];
 
 		/* CHECKED STYLES */
 		[type=radio]:checked+label {
-			outline: 2px solid #fff;
-			border: 2px solid #fff;
+			outline: 2px solid #000;
+			border: 2px solid #000;
 			border-radius: 25px;
 		}
 
@@ -126,7 +126,7 @@ $uid = $_SESSION['uid'];
 		}
 
 		label {
-			color: #fff;
+			color: black;
 			text-align: center;
 		}
 
@@ -134,7 +134,7 @@ $uid = $_SESSION['uid'];
 		.buttonrst {
 
 			display: inline-block;
-			width: 100px;
+			width: 75px;
 			outline: none;
 			cursor: pointer;
 			font-size: 14px;
@@ -142,7 +142,7 @@ $uid = $_SESSION['uid'];
 			border-radius: 500px;
 			transition-property: background-color, border-color, color, box-shadow, filter;
 			transition-duration: .3s;
-			border: 1px solid transparent;
+			/* border: 1px solid transparent; */
 			letter-spacing: 2px;
 			text-transform: uppercase;
 			white-space: normal;
@@ -151,8 +151,14 @@ $uid = $_SESSION['uid'];
 			padding: 16px 14px 18px;
 			color: #e6e8eb;
 			box-shadow: inset 0 0 0 2px #616467;
-			background-color: transparent;
+			background-color: black;
 			height: 48px;
+		}
+
+		.but{
+			padding-left: 37.5%;
+			width:100%;
+			align-items:center;
 		}
 
 		.buttonrst:hover {
@@ -228,7 +234,7 @@ $uid = $_SESSION['uid'];
 
 
 	<!-- Page top Section -->
-	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
+	<section class="page-top-section set-bg" data-setbg="img/gallery/dt.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
@@ -241,14 +247,13 @@ $uid = $_SESSION['uid'];
 
 
 
-	<section class="pricing-section spad">
-		<div class="container">
+	<section class="pricing-section spad" style="background-color: #fbb96a75">
 			<div class="row">
 				<form id="questions-form" action="dietpro.php" method="post">
 					<div id="question1">
-						<label style="width: 100%; font-size: 4vw;">Do you have any co-morbidity</label>
+						<label style="width: 100%; font-size: 4vw;">Do you have any co-morbidities?</label>
 						<div class="qcontainer">
-
+							<br><br><br><br>
 							<input type="radio" id="comorb-yes" name="comorb" value="TRUE">
 							<!-- <img src="img/questions/obese-yes.png" class="imgq" alt="YES"> -->
 							<label for="comorb-yes" class="image-button">YES</label>
@@ -259,20 +264,20 @@ $uid = $_SESSION['uid'];
 							<!-- <img src="img/questions/obese-no.png" class="imgq" alt="NO"> -->
 							<label for="comorb-no" class="image-button">NO</label>
 						</div>
-						<input type="button" class="buttonrst" value="Next" onclick="viewquestion2()" style="width: 30%">
+						<input type="button" class="buttonrst" value="Next" onclick="viewquestion2()" style="width: 20%">
 					</div>
 
 					<div id="question2" style="display: none;">
-						<label style="width: 100%; font-size: 4vw; padding-bottom:2vh" for="age">Select your age:</label>
+						<label style="width: 100%; font-size: 4vw; padding-bottom:2vh" for="age">Select Your Age:</label>
 						<div class="qcontainer" style="width: 100%;">
 							<input type="range" class="range" id="age" name="age" min="0" max="100" step="1" value="18" style="width: 30%;">
-							<div class="outp">
-								<output for="age" id="ageOutput">18</output> years old
+							<div class="outp" style="color:black;">
+								<output for="age" id="ageOutput" style="color:black;">18</output> years old
 							</div>
 						</div>
 
-						<input type="button" class="buttonrst" value="Previous" onclick="prev1()" style="width: 30%">
-						<input type="button" class="buttonrst" value="Next" onclick="viewquestion3()" style="width: 30%">
+						<div class="but"><input type="button" class="buttonrst" value="Previous" onclick="prev1()" style="width: 20%">
+						<input type="button" class="buttonrst" value="Next" onclick="viewquestion3()" style="width: 20%"></div>
 					</div>
 
 					<div id="question3" style="display: none;">
@@ -285,8 +290,8 @@ $uid = $_SESSION['uid'];
 							<input type="number" id="weight" name="weight" min="0" max="500" step="0.1">
 						</div>
 
-						<input type="button" class="buttonrst" value="Previous" onclick="prev2()" style="width: 30%">
-						<input type="submit" class="buttonrst" name="submit" value="Submit" style="width: 30%">
+						<div class="but"><input type="button" class="buttonrst" value="Previous" onclick="prev2()" style="width: 20%">
+						<input type="submit" class="buttonrst" name="submit" value="Submit" style="width: 20%"></div>
 					</div>
 				</form>
 
@@ -345,7 +350,7 @@ $uid = $_SESSION['uid'];
 	</section>
 
 	<!-- Footer Section -->
-	<?php include 'include/footer.php'; ?>
+	<!-- <?php include 'include/footer.php'; ?> -->
 	<!-- Footer Section end -->
 
 	<div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>

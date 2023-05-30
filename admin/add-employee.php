@@ -30,13 +30,13 @@ if (strlen($_SESSION['adminid'] == 0)) {
     $query->execute();
     $lastInsertId = $dbh->lastInsertId();
     if ($lastInsertId > 0) {
-      if($empdesignation==="Trainer"){
-        $sql="INSERT INTO tbltrainer (emp_id,certification,password) 
+      if ($empdesignation === "Trainer") {
+        $sql = "INSERT INTO tbltrainer (emp_id,certification,password) 
               VALUES (:empid,:empcertif,:pass)";
         $query = $dbh->prepare($sql);
-        $query->bindParam(':empid',$lastInsertId,PDO::PARAM_STR);
-        $query->bindParam(':empcertif',$empcertificate,PDO::PARAM_STR);
-        $query->bindParam(':pass',$password,PDO::PARAM_STR);
+        $query->bindParam(':empid', $lastInsertId, PDO::PARAM_STR);
+        $query->bindParam(':empcertif', $empcertificate, PDO::PARAM_STR);
+        $query->bindParam(':pass', $password, PDO::PARAM_STR);
         $query->execute();
       }
       echo "<script>alert('Employee Added succesfully.');</script>";
@@ -60,6 +60,24 @@ if (strlen($_SESSION['adminid'] == 0)) {
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      input[type="submit"] {
+        background-color: #4CAF50;
+        /* Set the background color */
+        color: white;
+        /* Set the text color */
+        padding: 10px 20px;
+        /* Adjust the padding */
+        border: none;
+        /* Remove the border */
+        border-radius: 4px;
+        /* Add rounded corners */
+        font-size: 16px;
+        /* Set the font size */
+        cursor: pointer;
+        /* Change the cursor on hover */
+      }
+    </style>
   </head>
 
   <body class="app sidebar-mini rtl">

@@ -66,11 +66,11 @@ $error="Your current password is not valid.";
 				background-color: rgba(0,0,0,0);
 			}
 			.singup-form input{
-				border-radius: 0px;
-				border-color: rgba(2, 2, 2, 0.5);
-				color: #312849;
-				/* background-color: #b7babd;
-				color: #fff;
+				border-radius: 0.5px solid;
+				color: white;
+				border-color: #846add;
+				background: transparent;
+				/*color: #fff;
 				border-top: rgba(0, 0, 0, 0);
 				border-left: rgba(0, 0, 0, 0);
 				border-right: rgba(0, 0, 0, 0);
@@ -85,15 +85,15 @@ $error="Your current password is not valid.";
 	<!-- Header Section end -->
 
 	<section class="vh-100"
-		style = "background-image: url(img/changepwdbg.jpg) ;background-repeat: no-repeat; background-size: cover; height: 100%;">
-		<div class="mask" style="background-color: rgba(0, 0, 0, 0);">
+		style = "background-image: url(img/gallery/12.jpg) ;background-repeat: no-repeat; background-size: cover; height: 100%;">
+		<div class="mask" style="background-color: rgba(0, 0, 0, 0.5);background-size: cover;height: 100%">
 		<?php include 'include/header.php';?>
 		<br><br><br><br><br><br>
-		<div class="container py-5 h-50">
+		<div class="container py-5 h-75">
 			<div class="row d-flex justify-content-center align-items-center h-50">
 				<div class="col-12 col-md-8 col-lg-6 col-xl-5">
-					<div class="card bg-transparent  text-white" style="border-radius: 1rem;">
-						<div class="card-body p-5 text-center bg-light" style="border-radius: 1rem; height:25rem;">
+					<div class="card bg-transparent text-white" style="border-radius: 1rem; border-color: grey">
+						<div class="card-body p-5 text-center bg-light" style="border-radius: 1rem; border-color: grey; height:60vh;">
 							<div class="mb-md-5 mt-md-1 pb-5">
 								<h2 class="fw-bold mb-2 text-uppercase" style="color: black" >Change password</h2>
 								<!-- <p class="text-white-50 mb-3">Enter your details below!</p> -->
@@ -112,8 +112,12 @@ $error="Your current password is not valid.";
 											<input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" autocomplete="off">
 										</div>
 									</div>
-									<input type="submit" id="submit" name="submit" value="Submit" class="site-btn sb-gradient" style="width:50px;">
+									<div>
+									<input type="submit" id="submit" name="submit" value="Submit" class="site-btn " style="width:50px;background: #846add ;color: black; border-width: 2px;">
+		</div>
+		<br>
 								</form>
+								
 							</div>
 						</div>
 					</div>

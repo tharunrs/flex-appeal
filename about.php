@@ -42,13 +42,16 @@ if (isset($_POST['submit'])) {
 	<link rel="stylesheet" href="css/style.css" />
 	<style>
 		footer {
-			background-color: #333;
+			background-color: transparent;
 			position: fixed;
 			left: 0px;
 			bottom: 0px;
 			width: 100%;
 		}
 
+		body{
+			background-image: url(/img/gallery/lilac.jpg);
+		}
 		.pricing-section {
 			color: rgba(0, 0, 0, 0);
 			background: rgba(0, 0, 0, 0);
@@ -62,7 +65,7 @@ if (isset($_POST['submit'])) {
 
 </head>
 
-<body class="page-top-section set-bg" data-setbg="img/gallery/13.jpg">
+<body class="page-top-section set-bg" data-setbg="img/gallery/lilac.jpg">
 	<!-- Page Preloder -->
 
 

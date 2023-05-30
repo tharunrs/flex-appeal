@@ -47,7 +47,7 @@ if(isset($_POST['submit'])) {
   </head>
   <body>
   <section class="vh-100"
-   style = "background-image: url(img/gym.avif) ;background-repeat: no-repeat; background-size: cover ">
+   style = "background-image: url(img/gallery/login.jpg) ;background-repeat: no-repeat; background-size: cover;">
    <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
   <div class="container py-5 h-50">
     <div class="row d-flex justify-content-center align-items-center h-50">

@@ -49,12 +49,16 @@ if (strlen($_SESSION["uid"]) == 0) {
 		<link rel="icon" type="image/x-icon" href="img/bell.png">
 		<style>
 			.header-top{
+				color: #aaa;
+				font-weight: bold;
 				background-color: rgba(0,0,0,0);
 			}
 			.singup-form input{
-				border-radius: 0px;
-				border-color: rgba(2, 2, 2, 0.5);
-				color: #312849;
+				border-radius: 0px solid;
+				border-color: #77a1d3;
+				color: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%) ;
+				background: transparent;
+				border-width: 2px;
 				/* background-color: #b7babd;
 				color: #fff;
 				border-top: rgba(0, 0, 0, 0);
@@ -66,17 +70,17 @@ if (strlen($_SESSION["uid"]) == 0) {
 	</head>
 
 	<body>
-		<section class="vh-100" style="background-image: url(img/changepwdbg.jpg) ;background-repeat: no-repeat; background-size: cover; height:100%">
-			<div class="mask" style="background-color: rgba(0, 0, 0, 0);">
+		<section class="vh-100" style="background: url(img/gallery/1.jpg); background-size: cover; height: 100%">
+			<div class="mask" style="background-color: rgba(0, 0, 0, 0.5); background-size: cover; height: 100%">
 				<?php include 'include/header.php'; ?>
 				<br><br><br><br><br><br>
-				<div class="container py-5 h-50">
-					<div class="row d-flex justify-content-center align-items-center h-50">
+				<div class="container py-5 h-75">
+					<div class="row d-flex justify-content-center align-items-center h-75">
 						<div class="col-12 col-md-8 col-lg-6 col-xl-5">
-							<div class="card bg-transparent  text-black" style="border-radius: 1rem;">
-								<div class="card-body p-5 text-center bg-light" style="border-radius: 1rem; height:30rem;">
+							<div class="card bg-transparent  text-black" style="border-radius: 2rem;">
+								<div class="card-body p-5 text-center bg-dark" style="border-radius: 2rem; height:30rem;">
 									<div class="mb-md-5 mt-md-1 pb-5">
-										<h2 class="fw-bold mb-2 text-uppercase" style="color: black">Profile</h2>
+										<h2 class="fw-bold mb-2 text-uppercase" style="color: white">Profile</h2>
 										<!-- <p class="text-black-50 mb-3">Enter your details below!</p> -->
 										<form class="singup-form contact-form" method="post">
 											<div class="row">
@@ -90,30 +94,38 @@ if (strlen($_SESSION["uid"]) == 0) {
 												$cnt = 1;
 												if ($query->rowCount() > 0) {
 													foreach ($results as $result) {				?>
-														<div class="col-md-6">
-															<input type="text" name="fname" id="fname" placeholder="First Name" autocomplete="off" value="<?php echo $result->fname; ?>">
+														<div class="col-md-6 ">
+															<input 
+															type="text" name="fname" id="fname" placeholder="First Name" autocomplete="off" value="<?php echo $result->fname; ?> ">
 														</div>
 														<div class="col-md-6">
-															<input type="text" name="lname" id="lname" placeholder="Last Name" autocomplete="off" value="<?php echo $result->lname; ?>">
+															<input
+															type="text" name="lname" id="lname" placeholder="Last Name" autocomplete="off" value="<?php echo $result->lname; ?>">
 														</div>
 														<div class="col-md-6">
-															<input type="text" name="email" id="email" placeholder="Your Email" autocomplete="off" value="<?php echo $result->email; ?>" readonly>
+															<input
+															type="text" name="email" id="email" placeholder="Your Email" autocomplete="off" value="<?php echo $result->email; ?>" readonly>
 														</div>
 														<div class="col-md-6">
-															<input type="text" name="mobile" id="mobile" placeholder="Mobile Number" autocomplete="off" value="<?php echo $result->mobile; ?>">
+															<input 
+															type="text" name="mobile" id="mobile" placeholder="Mobile Number" autocomplete="off" value="<?php echo $result->mobile; ?>">
 														</div>
 														<div class="col-md-6">
-															<input type="text" name="state" id="state" placeholder="State" autocomplete="off" value="<?php echo $result->state; ?>">
+															<input
+															type="text" name="state" id="state" placeholder="State" autocomplete="off" value="<?php echo $result->state; ?>">
 														</div>
 														<div class="col-md-6">
-															<input type="text" name="city" id="city" placeholder="City" autocomplete="off" value="<?php echo $result->city; ?>">
+															<input style = "border-radius: 2 rem:"
+															type="text" name="city" id="city" placeholder="City" autocomplete="off" value="<?php echo $result->city; ?>">
 														</div>
 
 														<div class="col-md-12">
-															<input type="text" name="address" id="address" placeholder="Address" autocomplete="off" value="<?php echo $result->address; ?>">
+															<input
+															type="text" name="address" id="address" placeholder="Address" autocomplete="off" value="<?php echo $result->address; ?>">
 														</div>
 														<div class="col-md-12">
-															<input type="submit" id="submit" name="submit" value="Update" class="site-btn sb-gradient">
+															<input
+															type="submit" id="submit" name="submit" value="Update" class="site-btn" style = "color: #fff; border-radius : 0px solid;">
 														</div>
 												<?php }
 												} ?>
@@ -143,7 +155,7 @@ if (strlen($_SESSION["uid"]) == 0) {
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/main.js"></script>
 
-	</body>
+
 
 	</html>
 <?php } ?>

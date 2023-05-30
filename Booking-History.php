@@ -28,7 +28,15 @@ $uid=$_SESSION['uid'];
       /* .vh-100{
         filter: grayscale(100%) brightness(200%);
       } */
-		</style>  
+		footer {
+			background-color: transparent;
+			position: relative;
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+		}
+
+	</style>  
 </head>
 <body>
 	<!-- Page Preloder -->
@@ -39,7 +47,7 @@ $uid=$_SESSION['uid'];
 	<!-- Header Section end -->
 
 	<section class="vh-100"
-	style = "background-image: url(img/changepwdbg.jpg) ;background-repeat: no-repeat; background-size: cover;height:100%">
+	style = "background-image: url(img/changepwdbg.jpg) ;background-repeat: no-repeat; background-size: cover;height:fit-content	">
 		<div class="mask" style="background-color: rgba(0, 0, 0, 0);">
 			<h2 style="color: white; text-align: center; padding-top:210px;" >BOOKING HISTORY</h2>
 			<section class="contact-page-section spad overflow-hidden">
@@ -103,6 +111,7 @@ $uid=$_SESSION['uid'];
 				</div>
 			</section>
 		</div>
+		<?php include 'include/footer.php'; ?>
 
 	</section>
 	<!-- Trainers Section end -->
@@ -110,7 +119,6 @@ $uid=$_SESSION['uid'];
 
 
 	<!-- Footer Section -->
-	<?php include 'include/footer.php'; ?>
 	<!-- Footer Section end -->
 
 	<div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>
